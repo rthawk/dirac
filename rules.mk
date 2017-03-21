@@ -45,7 +45,7 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 #   Atmel DFU loader 4096
 #   LUFA bootloader  4096
 #   USBaspLoader     2048
-OPT_DEFS += -DBOOTLOADER_SIZE=512
+OPT_DEFS += -DBOOTLOADER_SIZE=4096
 
 
 # Build Options
@@ -66,3 +66,15 @@ UNICODE_ENABLE ?= no         # Unicode
 BLUETOOTH_ENABLE ?= no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE ?= no           # Audio output on port C6
 FAUXCLICKY_ENABLE ?= no      # Use buzzer to emulate clicky switches
+
+avrdude: build
+	ls /dev/tty* > /tmp/1; \
+	echo "Reset your Pro Micro now"; \
+	while [[ -z $$USB ]]; do \
+	  sleep 1; \
+	  ls /dev/tty* > /tmp/2; \
+	  USB=`diff /tmp/1 /tmp/2 | grep -o '/dev/tty.*'`; \
+	done;\
+	avrdude -C $$HOME/Arduino/hardware/sparkfun/avr/avrdude.conf -v -p$(MCU) -cavr109 -P$$USB -b57600 -D -Uflash:w:$(BUILD_DIR)/$(TARGET).hex:i
+
+.PHONY: avrdude
