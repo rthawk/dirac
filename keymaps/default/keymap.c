@@ -2,9 +2,10 @@
 
 // layers
 #define _QWERTY 0
-#define _NUMBER 1
-#define _SYMBOL 2
-#define _MOVE   3
+#define _QGMLWY 1
+#define _NUMBER 2
+#define _SYMBOL 3
+#define _MOVE   4
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -18,10 +19,17 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = {
-  {KC_ESC , KC_Q ,   KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    ALT_T(KC_BSPC)},
+  {KC_ESC , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    ALT_T(KC_BSPC)},
   {KC_LCTL, XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    CTL_T(KC_SCLN)},
   {KC_LSFT, KC_Z,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
-  {MO_MOVE, KC_LALT, KC_LGUI, KC_LALT, MO_SYML, KC_SPC,  KC_RSPC, MO_NUML, KC_RALT, KC_RCTL, KC_UP  , KC_RGUI}
+  {MO_MOVE, KC_LALT, KC_LGUI, KC_LALT, MO_SYML, KC_SPC,  KC_RSPC, MO_NUML, KC_RALT, KC_RCTL, TG(_QGMLWY), KC_RGUI}
+},
+
+[_QGMLWY] = {
+  {_______, KC_Q,    KC_G,    KC_M,    KC_L,    KC_W,    KC_Y,    KC_F,    KC_U,    KC_B,    KC_SCLN, _______},
+  {_______, _______, KC_D,    KC_S,    KC_T,    KC_N,    KC_R,    KC_I,    KC_A,    KC_E,    KC_O,       KC_H},
+  {_______, KC_Z,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_J,    KC_K,    KC_P,    _______, _______, _______},
+  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 },
 
 [_NUMBER] = {
