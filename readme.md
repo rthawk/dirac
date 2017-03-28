@@ -3,7 +3,9 @@ dirac keyboard firmware
 
 ## about
 handwired 40% staggered keyboard for QMK.
-this repo is keymap files only.
+controller: pro micro clone
+top plate : steel from lasergist
+bottom plate: none
 
 layout is [here](http://www.keyboard-layout-editor.com/#/gists/fdd76a2dbcc32aee31c7aa5aded2b8cb)
 
