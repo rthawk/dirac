@@ -47,10 +47,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 },
 
 [_MOVE] = {
-  {KC_TAB,  KC_EXLM, KC_DQT,  KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_PGUP, KC_TAB,  KC_LCBR, KC_HOME, KC_PIPE},
-  {_______, XXXXXXX, KC_EXLM, KC_AT,   KC_PGDN, KC_DLR,  KC_PERC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT},
+  {KC_TAB,  KC_EXLM, KC_WH_U, KC_WH_L, KC_WH_R, KC_PERC, KC_CIRC, KC_PGUP, KC_TAB,  KC_LCBR, KC_HOME, KC_PIPE},
+  {_______, XXXXXXX, KC_EXLM, KC_WH_D, KC_PGDN, KC_DLR,  KC_PERC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT},
   {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_END , KC_ENT,  KC_BSPC, _______, _______},
-  {_______, _______, _______, _______, KC_BTN1, KC_BTN1, _______, _______, _______, _______, _______, _______}
+  {_______, _______, _______, KC_BTN3, KC_BTN2, KC_BTN1, _______, _______, _______, _______, _______, _______}
 },
 
 };
