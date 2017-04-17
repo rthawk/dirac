@@ -6,6 +6,7 @@
 #define _NUMBER 2
 #define _SYMBOL 3
 #define _MOVE   4
+#define _MOUSE  5
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -14,6 +15,7 @@
 #define MO_NUML MO(_NUMBER)
 #define MO_SYML MO(_SYMBOL)
 #define MO_MOVE MO(_MOVE)
+#define MO_MOUS MO(_MOUSE)
 #define KC_SSPC SFT_T(KC_SPC)
 
 
@@ -21,13 +23,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = {
   {KC_ESC , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    ALT_T(KC_BSPC)},
   {KC_LCTL, XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    CTL_T(KC_SCLN)},
-  {KC_LSFT, KC_Z,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
+  {KC_LSFT, MO_MOUS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
   {MO_MOVE, KC_LALT, KC_LGUI, KC_LALT, MO_SYML, KC_SPC,  KC_SSPC, MO_NUML, KC_RALT, KC_RCTL, TG(_QGMLWY), KC_RGUI}
 },
 
 [_QGMLWY] = {
   {_______, KC_Q,    KC_G,    KC_M,    KC_L,    KC_W,    KC_Y,    KC_F,    KC_U,    KC_B,    KC_SCLN, _______},
-  {_______, _______, KC_D,    KC_S,    KC_T,    KC_N,    KC_R,    KC_I,    KC_A,    KC_E,    KC_O,       KC_H},
+  {_______, _______, KC_D,    KC_S,    KC_T,    KC_N,    KC_R,    KC_I,    KC_A,    KC_E,    KC_O,    CTL_T(KC_H)},
   {_______, KC_Z,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_J,    KC_K,    KC_P,    _______, _______, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 },
@@ -48,9 +50,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_MOVE] = {
   {KC_TAB,  KC_WH_L, KC_WH_U, KC_WH_R, KC_ACL0, KC_ACL1, KC_ACL2, KC_PGUP, KC_TAB,  KC_LCBR, KC_HOME, KC_PIPE},
-  {_______, XXXXXXX, KC_EXLM, KC_WH_D, KC_PGDN, KC_DLR,  KC_PERC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT},
+  {_______, XXXXXXX, KC_EXLM, KC_WH_D, KC_PGDN, KC_BTN1, KC_PERC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT},
   {_______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_F11,  KC_F12,  KC_END , KC_ENT,  KC_BSPC, _______, _______},
   {_______, _______, _______, KC_BTN3, KC_BTN2, KC_BTN1, _______, _______, _______, _______, _______, _______}
+},
+
+[_MOUSE] = {
+  {_______, _______, _______, _______, _______, _______, _______, _______, KC_WH_L, KC_WH_R, _______, _______},
+  {_______, XXXXXXX, _______, _______, _______, _______, KC_WH_U, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______},
+  {_______, _______, _______, _______, _______, _______, KC_WH_D, _______, _______, _______, _______, _______},
+  {_______, _______, _______, KC_BTN3, KC_BTN2, KC_BTN1, _______, KC_ACL2, KC_ACL1, KC_ACL0, _______, _______}
 },
 
 };
