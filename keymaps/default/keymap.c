@@ -17,13 +17,14 @@
 #define MO_MOVE MO(_MOVE)
 #define MO_MOUS MO(_MOUSE)
 #define KC_SSPC SFT_T(KC_SPC)
-
+#define ESC_MSL LT(_MOUSE, KC_ESC)
+#define OS_LSFT OSM(MOD_LSFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = {
-  {KC_ESC , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    ALT_T(KC_BSPC)},
+  {ESC_MSL, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    ALT_T(KC_BSPC)},
   {KC_LCTL, XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    CTL_T(KC_SCLN)},
-  {KC_LSFT, MO_MOUS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
+  {KC_LSFT, OS_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
   {MO_MOVE, KC_LALT, KC_LGUI, KC_LALT, MO_SYML, KC_SPC,  KC_SSPC, MO_NUML, KC_RALT, KC_RCTL, TG(_QGMLWY), KC_RGUI}
 },
 
