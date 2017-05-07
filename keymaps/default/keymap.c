@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_SYMBOL] = KEYMAP(
-  KC_GRV,  KC_EXLM, KC_DQT,  KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_MINS, KC_EQL,  KC_LCBR, KC_RCBR, KC_BSLS,
+  KC_GRV,  KC_TILD, KC_DQT,  KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
   _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
   _______, _______, _______, KC_DQT,  KC_TILD, _______, _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
