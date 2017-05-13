@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QGMLWY] = KEYMAP(
   _______, KC_Q,    KC_G,    KC_M,    KC_L,    KC_W,    KC_Y,    KC_F,    KC_U,    KC_B,    KC_SCLN, _______,
-  _______, KC_D,    KC_S,    KC_T,    KC_N,    KC_R,    KC_I,    KC_A,    KC_E,    KC_O,    CTL_T(KC_H),
+  _______, KC_D,    KC_S,    KC_T,    KC_N,    KC_R,    KC_I,    KC_A,    KC_E,    KC_O,    KC_H,
   _______, KC_Z,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_J,    KC_K,    KC_P,    _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_MOUSE] = KEYMAP(
-  _______, _______, KC_WH_U, _______, _______, _______, _______, _______, KC_WH_L, KC_WH_R, _______, _______,
+  _______, _______, KC_WH_U, _______, _______, _______, _______, _______, KC_WH_L, KC_WH_R, KC_INS,  KC_DEL,
   _______, _______, KC_WH_D, _______, _______, KC_WH_U, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______,
   _______, _______, _______, _______, _______, _______, KC_WH_D, _______, _______, _______, _______, _______,
   _______, _______, _______, KC_BTN3, KC_BTN2, KC_BTN1, _______, KC_ACL2, KC_ACL1, KC_ACL0, _______, _______
